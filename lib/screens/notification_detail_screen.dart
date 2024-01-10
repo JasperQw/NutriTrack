@@ -134,7 +134,8 @@ class _NotificationDetailScreenState extends State<NotificationDetailScreen> {
                                               .collection("users")
                                               .doc(auth.currentUser!.uid)
                                               .collection("guardian")
-                                              .add({
+                                              .doc(widget.senderUid)
+                                              .set({
                                             "name": senderName,
                                             "profileImage": senderProfileImage
                                           });
@@ -143,7 +144,8 @@ class _NotificationDetailScreenState extends State<NotificationDetailScreen> {
                                               .collection("users")
                                               .doc(widget.senderUid)
                                               .collection("dependent")
-                                              .add({
+                                              .doc(auth.currentUser!.uid)
+                                              .set({
                                             "name": currentUserName,
                                             "plan": currentUserPlan,
                                             "profileImage":
@@ -167,7 +169,8 @@ class _NotificationDetailScreenState extends State<NotificationDetailScreen> {
                                               .collection("users")
                                               .doc(auth.currentUser!.uid)
                                               .collection("dependent")
-                                              .add({
+                                              .doc(widget.senderUid)
+                                              .set({
                                             "name": senderName,
                                             "plan": senderPlan,
                                             "profileImage": senderProfileImage
@@ -177,7 +180,8 @@ class _NotificationDetailScreenState extends State<NotificationDetailScreen> {
                                               .collection("users")
                                               .doc(widget.senderUid)
                                               .collection("guardian")
-                                              .add({
+                                              .doc(auth.currentUser!.uid)
+                                              .set({
                                             "name": currentUserName,
                                             "profileImage":
                                                 currentUserProfileImage

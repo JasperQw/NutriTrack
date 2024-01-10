@@ -130,7 +130,7 @@ class _TrackScreenState extends State<TrackScreen> {
                       ),
                       readOnly: true,
                       style: const TextStyle(
-                        fontSize: 24,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
